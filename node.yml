@@ -1,0 +1,18 @@
+# Name of the workflow
+name: NASA Project CI
+on: # Triggers that will cause workflow to run
+  push:
+    branches: [master]
+  pull_request:
+    branches: [master]
+
+jobs: # This is wht runs when one the two above events are triggered
+  build:
+    runs-on: ubuntu-laatest #State which operating system youll be using to build
+    steps: #define the different actions that are going to be taken on our runs on options whenever our build job is triggered by a push or pull request to the master branch.
+      - uses: actions/checkout@v2 #Good to use versions
+      - uses: actions/setup-node@v2
+        with:
+          node-version: "16"
+      - run: npm install #Will install dependancies
+      - run: npm run build --prefix client
