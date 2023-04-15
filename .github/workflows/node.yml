@@ -2,9 +2,9 @@
 name: NASA Project CI
 on: # Triggers that will cause workflow to run
   push:
-    branches: [master]
+    branches: [main]
   pull_request:
-    branches: [master]
+    branches: [main]
 
 jobs: # This is wht runs when one the two above events are triggered
   build:
