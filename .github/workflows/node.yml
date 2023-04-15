@@ -1,6 +1,5 @@
 # Name of the workflow
 name: NASA Project CI
-
 on: # Triggers that will cause workflow to run
   push:
     branches: [master]
