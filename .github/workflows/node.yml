@@ -14,7 +14,7 @@ jobs: # This is wht runs when one the two above events are triggered
     strategy:
       matrix:
         node-version: [14.x, 16.x]
-        mongo-version: ["4.4"]
+        mongodb-version: ["4.4"]
     runs-on: ubuntu-latest #State which operating system youll be using to build
     steps: #define the different actions that are going to be taken on our runs on options whenever our build job is triggered by a push or pull request to the master branch.
       - uses: actions/checkout@v2 #Good to use versions
