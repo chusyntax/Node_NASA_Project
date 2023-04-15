@@ -14,6 +14,6 @@ jobs: # This is wht runs when one the two above events are triggered
       - name: Use node16
         uses: actions/setup-node@v2
         with:
-          node-version: 16
+          node-version: "16"
       - run: npm install #Will install dependancies
       - run: npm run build --prefix client
